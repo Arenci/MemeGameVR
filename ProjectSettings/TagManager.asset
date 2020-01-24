@@ -15,6 +15,9 @@ TagManager:
   - CarlosWall
   - VictorWall
   - EstebanWall
+  - Win
+  - Start
+  - Quit
   layers:
   - Default
   - TransparentFX

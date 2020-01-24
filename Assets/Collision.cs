@@ -64,8 +64,8 @@ public class Collision : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Esteban"))
         {
-            limiHit.volume = 0.5f;
-            limiHit.Play();
+            estebanHit.volume = 0.5f;
+            estebanHit.Play();
             Destroy(other.gameObject);
             count++;
         }
@@ -76,13 +76,13 @@ public class Collision : MonoBehaviour
         }
         if (other.gameObject.CompareTag("VictorWall"))
         {
-            victorMiss.volume = 2;
+            victorMiss.volume = 0.5f;
             victorMiss.Play();
         }
         if (other.gameObject.CompareTag("EstebanWall"))
         {
-            limiMiss.volume = 0.5f;
-            limiMiss.Play();
+            estebanMiss.volume = 0.5f;
+            estebanMiss.Play();
         }
         if (other.gameObject.CompareTag("CarlosWall"))
         {

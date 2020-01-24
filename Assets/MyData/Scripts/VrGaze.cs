@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class VrGaze : MonoBehaviour
@@ -47,6 +48,16 @@ public class VrGaze : MonoBehaviour
             if (imgGaze.fillAmount == 1 && hit.transform.CompareTag("Limi") || imgGaze.fillAmount == 1 && hit.transform.CompareTag("Carlos") || imgGaze.fillAmount == 1 && hit.transform.CompareTag("Esteban") || imgGaze.fillAmount == 1 && hit.transform.CompareTag("Víctor") || imgGaze.fillAmount == 1 && hit.transform.CompareTag("Diana"))
             {
                 hit.transform.gameObject.GetComponent<Shoot>().LaunchBall();
+                
+            }
+
+            if (imgGaze.fillAmount == 1 && hit.transform.CompareTag("Start"))
+            {
+                SceneManager.LoadScene("00");
+            }
+            if (imgGaze.fillAmount == 1 && hit.transform.CompareTag("Quit"))
+            {
+                Application.Quit();
                 
             }
         }
